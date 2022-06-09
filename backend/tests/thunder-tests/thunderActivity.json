@@ -1,0 +1,86 @@
+[
+  {
+    "_id": "a4b45204-d8fc-4393-a696-8dd1aedc167e",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://127.0.0.1/auth",
+    "url": "https://127.0.0.1/auth",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-09T20:50:19.510Z",
+    "modified": "2022-06-09T20:51:00.619Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "601f79ae-c9e0-4f55-9b2d-88d20bd412f3",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://127.0.0.1:8000/auth",
+    "url": "https://127.0.0.1:8000/auth",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-09T20:51:07.986Z",
+    "modified": "2022-06-09T20:51:07.997Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ba901205-8eae-4474-8e2b-935fa4ff487e",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8000/auth",
+    "url": "http://127.0.0.1:8000/auth",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-09T20:51:21.134Z",
+    "modified": "2022-06-09T20:51:21.154Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e20bb7ca-2ffa-48e4-86dd-c8f2ee81e6c5",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8000/auth",
+    "url": "http://127.0.0.1:8000/auth",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-09T20:51:25.512Z",
+    "modified": "2022-06-09T20:51:25.685Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a6f71a11-949e-4dd3-949c-5dc9a3005699",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8000/auth/",
+    "url": "http://127.0.0.1:8000/auth/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-09T20:51:33.800Z",
+    "modified": "2022-06-09T21:04:00.891Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "username",
+          "value": "admin"
+        },
+        {
+          "name": "password",
+          "value": "senhafacil"
+        }
+      ]
+    },
+    "tests": []
+  }
+]
