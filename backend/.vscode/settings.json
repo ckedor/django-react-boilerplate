@@ -1,4 +1,9 @@
 {
     "thunder-client.saveToWorkspace": true,
-    "thunder-client.workspaceRelativePath": "tests"
+    "thunder-client.workspaceRelativePath": "tests",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#2D2E29",
+        "titleBar.activeBackground": "#3F4139",
+        "titleBar.activeForeground": "#FBFBFA"
+    }
 }
