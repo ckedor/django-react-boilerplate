@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import LoginComponent from './components/login/login.component'
+import NavbarComponent from './components/navbar/navbar.component';
 
 class App extends Component {
 
@@ -23,13 +24,19 @@ class App extends Component {
 
     if (!token){
       return (
-        <LoginComponent 
-          handleToken={handleToken}
-        />
+        <div>
+          <NavbarComponent />
+          <LoginComponent 
+            handleToken={handleToken}
+          />
+        </div>
       )
     } else {
       return (
-        <p>Página Principal</p>
+        <div>
+          <NavbarComponent />
+          <p>Página Principal</p>
+        </div>
       )
     }
   }

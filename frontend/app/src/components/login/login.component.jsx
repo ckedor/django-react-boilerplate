@@ -1,4 +1,7 @@
 import { Component } from "react";
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+import './login.css'
 
 class LoginComponent extends Component {
 
@@ -44,14 +47,38 @@ class LoginComponent extends Component {
         
         const {username, password} = this.state;
         return(
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" value={username} onChange={handleUsername} />
-                    <input type="password" value={password} onChange={handlePassword} />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>       
+            <div className="container">
+                <div className="login-wrapper">
+                    <div className="row justify-content-center">
+                        <div className="col-2">
+                            <h2 className="login-title">Login</h2>
+                        </div>
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className="col-3 form-wrapper">
+                            <Form onSubmit={handleSubmit}>
+                                <div className="row input-wrapper">
+                                    <div className="col-12">
+                                        <label>Name</label>  
+                                        <input className="input-field" type="text" value={username} onChange={handleUsername} />
+                                    </div>
+                                </div>
+                                <div className="row input-wrapper">
+                                    <div className="col-12">
+                                        <label>Password</label>
+                                        <input className="input-field" type="password" value={password} onChange={handlePassword} />
+                                    </div>
+                                </div>
+                                <div className="row button-wrapper">
+                                    <Button className="btn-info" variant="dark" type="submit" value="Submit" >
+                                        Login
+                                    </Button>
+                                </div>
+                            </Form>
+                        </div>       
+                    </div>
+                </div>
+            </div>
         )
     }
 
