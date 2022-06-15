@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoggedArea from './components/logged-area/logged-area.component';
 import LoginComponent from './components/login/login.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,9 +11,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route element={<App />}>
-          <Route path="/login_required" element={<div>Página Protegida Inicial</div>} />
-          <Route path="login" element={<LoginComponent />} />
+        <Route path="/login" element={<LoginComponent />} />
+        <Route path="/logged_area" element={<LoggedArea />}>
+          <Route path="/logged_area/" element={<div>Página Protegida Inicial</div>} />
         </Route>
         <Route path="/" element={<div>Página Pública Inicial</div>}></Route>
       </Routes>

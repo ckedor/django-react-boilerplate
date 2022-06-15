@@ -26,3 +26,8 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
+.password-error-message {
+    color: red;
+    position: absolute;
+}

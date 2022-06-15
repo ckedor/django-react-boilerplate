@@ -15,6 +15,7 @@ class NavbarComponent extends Component {
     render(){
 
         const { handleLogout } = this;
+        const loggedIn  = this.props.loggedIn;
         return (
             <Navbar bg="dark py-2" variant="dark">
                 <Navbar.Brand href="#home" className='navbar-brand'>
@@ -27,7 +28,7 @@ class NavbarComponent extends Component {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                    {this.props.loggedIn &&
+                    {loggedIn &&
                     <Button variant="link" className="navbar-logout-button" style={{ boxShadow: 'none'}} onClick={handleLogout}>Logout</Button>
                     }
                     </Nav>

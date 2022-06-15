@@ -1,8 +1,9 @@
 import { Component } from 'react'
 import { Outlet } from "react-router-dom";
-import NavbarComponent from './components/navbar/navbar.component';
+import LoginRequired from "../login_required/login_required.component"
+import NavbarComponent from '../navbar/navbar.component';
 
-class App extends Component {
+class LoggedArea extends Component {
 
   constructor(){
     super();
@@ -11,14 +12,7 @@ class App extends Component {
       token: ''
     }
 
-    this.handleLogin = this.handleLogin.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
-  }
-
-  handleLogin(token){
-    if (token){
-      this.setState({token})
-    }
   }
 
   handleLogout(){
@@ -26,18 +20,18 @@ class App extends Component {
   }
 
   render(){
-    var token = localStorage.getItem("token")
-    const { handleLogin, handleLogout} = this;
-
+    const { handleLogout } = this;
     return (
       <div>
+        <LoginRequired></LoginRequired>
         <NavbarComponent 
           handleLogout={handleLogout}
-          loggedIn={false} />
+          loggedIn={true} />
+        
         <Outlet />
       </div>
     )
   }
 }
 
-export default App;
+export default LoggedArea;
