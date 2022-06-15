@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import LoginComponent from './components/login/login.component'
+import { Outlet } from "react-router-dom";
 import NavbarComponent from './components/navbar/navbar.component';
 
 class App extends Component {
@@ -29,29 +29,14 @@ class App extends Component {
     var token = localStorage.getItem("token")
     const { handleLogin, handleLogout} = this;
 
-    if (!token){
-      return (
-        <div>
-          <NavbarComponent 
-            handleLogout={handleLogout}
-            loggedIn={false}
-          />
-          <LoginComponent 
-            handleLogin={handleLogin}
-          />
-        </div>
-      )
-    } else {
-      return (
-        <div>
-          <NavbarComponent 
-            handleLogout={handleLogout}
-            loggedIn={true}
-          />
-          <p>Página Principal</p>
-        </div>
-      )
-    }
+    return (
+      <div>
+        <NavbarComponent 
+          handleLogout={handleLogout}
+          loggedIn={false} />
+        <Outlet />
+      </div>
+    )
   }
 }
 
