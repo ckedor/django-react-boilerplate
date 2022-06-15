@@ -33,7 +33,7 @@ class LoginComponent extends Component {
             .then(response => response.json())
             .then(data => {
                 localStorage.setItem('token', data.token)
-                this.props.handleToken(data.token)
+                this.props.handleLogin(data.token)
             }
             );
         event.preventDefault();

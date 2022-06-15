@@ -11,30 +11,43 @@ class App extends Component {
       token: ''
     }
 
-    this.handleToken = this.handleToken.bind(this)
+    this.handleLogin = this.handleLogin.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
   }
 
-  handleToken(token){
-    this.setState({token})
+  handleLogin(token){
+    if (token){
+      this.setState({token})
+    }
+  }
+
+  handleLogout(){
+    this.setState({token:undefined})
   }
 
   render(){
     var token = localStorage.getItem("token")
-    const { handleToken } = this;
+    const { handleLogin, handleLogout} = this;
 
     if (!token){
       return (
         <div>
-          <NavbarComponent />
+          <NavbarComponent 
+            handleLogout={handleLogout}
+            loggedIn={false}
+          />
           <LoginComponent 
-            handleToken={handleToken}
+            handleLogin={handleLogin}
           />
         </div>
       )
     } else {
       return (
         <div>
-          <NavbarComponent />
+          <NavbarComponent 
+            handleLogout={handleLogout}
+            loggedIn={true}
+          />
           <p>Página Principal</p>
         </div>
       )
