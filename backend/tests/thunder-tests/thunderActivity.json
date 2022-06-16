@@ -64,7 +64,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-06-09T20:51:33.800Z",
-    "modified": "2022-06-13T00:46:09.039Z",
+    "modified": "2022-06-16T00:16:22.067Z",
     "headers": [],
     "params": [],
     "body": {
@@ -72,6 +72,77 @@
       "raw": "{\n    \"username\":\"admin\",\n    \"password\":\"senhafacil\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "479a527e-a7f8-4479-845c-1e8f0e91e015",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8000/auth/",
+    "url": "http://127.0.0.1:8000/auth/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-16T00:03:17.072Z",
+    "modified": "2022-06-16T00:12:42.347Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a7808040-f53b-488e-a196-2e854042e8d6",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.thunderclient.com/welcome",
+    "url": "https://www.thunderclient.com/welcome",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-16T00:03:42.093Z",
+    "modified": "2022-06-16T00:03:54.319Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token cc65e35bc097bc086b05ad1982e4a3b433590d65"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "0b280406-04f7-4c63-a7b4-2499fd897317",
+    "colId": "history",
+    "containerId": "",
+    "name": "",
+    "url": "",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-16T00:04:01.103Z",
+    "modified": "2022-06-16T00:04:01.103Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token cc65e35bc097bc086b05ad1982e4a3b433590d65"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e405cefb-f560-4cc8-b2bc-f5cf4ea47948",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8000/users/current_user",
+    "url": "http://127.0.0.1:8000/users/current_user",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-16T00:04:33.960Z",
+    "modified": "2022-06-16T00:16:24.067Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token cc65e35bc097bc086b05ad1982e4a3b433590d65"
+      }
+    ],
+    "params": [],
     "tests": []
   }
 ]

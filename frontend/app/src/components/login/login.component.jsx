@@ -14,6 +14,7 @@ class LoginComponent extends Component {
             username: '',
             password: '',
             token: '', 
+            user: '',
             showPasswordError: false
         }
     }
@@ -36,11 +37,11 @@ class LoginComponent extends Component {
         fetch(url, requestOptions)
             .then((response) => {
                 if (response.ok){
+                    console.log(response)
                     return response.json()
-                }
-                else{
+                } 
+                else 
                     return null
-                }
             })
             .then(data => {
                 if (data){
@@ -65,7 +66,7 @@ class LoginComponent extends Component {
         const token = localStorage.getItem('token')
 
         if (token){
-            return <Navigate to="/logged_area" state={token} replace />;
+            return <Navigate to="/logged_area" state={{token}} replace />;
         } else {
             return(
                 <div>

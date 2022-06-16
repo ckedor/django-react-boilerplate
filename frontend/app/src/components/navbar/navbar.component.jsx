@@ -4,6 +4,7 @@ import './navbar.css'
 import { Component } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button';
+import { MdLogout, MdPerson } from "react-icons/md/";
 
 class NavbarComponent extends Component {
 
@@ -16,6 +17,14 @@ class NavbarComponent extends Component {
 
         const { handleLogout } = this;
         const loggedIn  = this.props.loggedIn;
+        console.log(this.props)
+        const user = {
+            username:""
+        }
+        if (this.props.user){
+            user.username = this.props.user.username
+        }
+
         return (
             <Navbar bg="dark py-2" variant="dark">
                 <Navbar.Brand href="#home" className='navbar-brand'>
@@ -28,8 +37,20 @@ class NavbarComponent extends Component {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
+                    {user.username &&
+                    <Navbar.Text className="navbar-user">
+                        <MdPerson className="navbar-user-icon" size={20}/>
+                        {user.username}
+                    </Navbar.Text>
+                    }
+                    
                     {loggedIn &&
-                    <Button variant="link" className="navbar-logout-button" style={{ boxShadow: 'none'}} onClick={handleLogout}>Logout</Button>
+                    <Button variant="link" 
+                        className="navbar-logout-button" 
+                        style={{ boxShadow: 'none'}} 
+                        onClick={handleLogout}>
+                        Logout  <MdLogout className="navbar-logout-icon"/>
+                    </Button>
                     }
                     </Nav>
                 </Navbar.Collapse>
