@@ -3,14 +3,13 @@ from rest_framework import viewsets, permissions, authentication
 from .serializers import UserSerializer, GroupSerializer
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.decorators import action
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
     permissions_classes = [permissions.IsAuthenticated]
     authentication_classes = [authentication.TokenAuthentication, authentication.SessionAuthentication]
-    
-    from rest_framework.decorators import action
     
     @action(detail=False)
     def current_user(self, request):
