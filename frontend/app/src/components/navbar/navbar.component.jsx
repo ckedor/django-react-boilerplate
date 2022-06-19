@@ -17,7 +17,6 @@ class NavbarComponent extends Component {
 
         const { handleLogout } = this;
         const loggedIn  = this.props.loggedIn;
-        console.log(this.props)
         const user = {
             username:""
         }
