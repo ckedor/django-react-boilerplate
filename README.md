@@ -57,6 +57,13 @@ O comando $git remote -v possibilita ver os repos criados
 $ git subtree --prefix=frontend push front main
 $ git subtree --prefix=backend push back main
 
+- Criar um SECRET_KEY como variável de ambiente da API:
+abrir um shell python no seu projeto local:
+$ python manage.py shell
+$ from django.core.management.utils import get_random_secret_key
+$ print(get_random_secret_key())
+Copie a chave criada, entre no console do heroku no app da api, e crie a variavel de ambiente SECRET_KEY com a chave copiada
+
 - Criar um superusuário para acessar o admin do django:
 $ heroku run python manage.py createsuperuser --remote back
 
