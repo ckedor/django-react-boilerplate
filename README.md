@@ -48,13 +48,13 @@ Existe a possibilidade de separar o front e o back em repositórios separados e 
 
 - Criar repositório no github
 - Criar apps no heroku com os buildpacks necessários
-$ heroku create <nome-do-app-do-front> --remote front
+$ heroku create <nome-do-app-do-front> --remote front -b https://github.com/mars/create-react-app-buildpack.git
 $ heroku create <nome-do-app-do-back> --remote back --buildpack heroku/python
 
 O comando $git remote -v possibilita ver os repos criados
 
 - Para fazer o deploy, use o script ./deploy no diretorio de cada app ou execute no diretório raiz:
-$ git subtree --prefix=frontend push front main
+$ git subtree --prefix=frontend/app push front main
 $ git subtree --prefix=backend push back main
 
 - Variáveis de ambiente da API:
@@ -77,6 +77,8 @@ CORS_ORIGIN_WHITELIST = [
 
 e a URL da API no allowed hosts:
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '<URL DA API>']
+
+E também URL da API no ./frontend/app/src/config
 
 ###########################
 Adicionais Heroku (Como tem mais de um app, usar no fim de cada comando o argumento indicando qual app, dessa forma: --remote back/front )
