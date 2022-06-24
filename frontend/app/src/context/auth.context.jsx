@@ -1,7 +1,7 @@
 import { useState, useEffect, createContext } from 'react';
+import { useNavigate } from 'react-router-dom'
 import jwt_decode from 'jwt-decode'
 import config from '../config';
-import { useNavigate } from 'react-router-dom'
 
 const API_TOKEN_URL = config.API_URL + 'token/'
 const API_REFRESH_TOKEN_URL = config.API_URL + 'token/refresh/'
@@ -36,7 +36,6 @@ export const AuthProvider = ({children}) => {
                     return response.json()
                 }
                 else {
-                    alert("Erro ao buscar o token na API")
                 }
             })
             .then(data => {
