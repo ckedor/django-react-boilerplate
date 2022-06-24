@@ -4,14 +4,12 @@ import './navbar.scss'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button';
 import { MdLogout, MdPerson } from "react-icons/md/";
-import { Fragment } from 'react';
+import { Fragment, useContext} from 'react';
+import AuthContext from '../../context/auth.context';
 
-const NavbarComponent = ({ handleLogout, username }) => {
+const NavbarComponent = () => {
 
-    const logout = (event) => {
-        localStorage.removeItem('token')
-        handleLogout()
-    }
+    const {user, logout} = useContext(AuthContext)
 
     return (
         <Navbar bg="dark py-2" variant="dark">
@@ -25,11 +23,11 @@ const NavbarComponent = ({ handleLogout, username }) => {
                     style={{ maxHeight: '100px' }}
                     navbarScroll
                 >
-                {username &&
+                {user &&
                 <Fragment>
                     <Navbar.Text className="navbar-user">
                         <MdPerson className="navbar-user-icon" size={20}/>
-                        {username}
+                        {user.username}
                     </Navbar.Text>
                     <Button variant="link" 
                         className="navbar-logout-button" 

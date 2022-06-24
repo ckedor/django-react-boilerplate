@@ -1,9 +1,10 @@
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import './login-form.scss'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import AuthContext from '../../context/auth.context';
 
-const LoginForm = ({handleLogin, showPasswordError}) => {
+const LoginForm = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -17,8 +18,10 @@ const LoginForm = ({handleLogin, showPasswordError}) => {
     }
 
     const handleSubmit = (event) => {
-        handleLogin(event, username, password)
+        login(event, username, password)
     }
+
+    const { login, wrongCredentialsError } = useContext(AuthContext)
 
     return(
         <div className="container">
@@ -41,7 +44,7 @@ const LoginForm = ({handleLogin, showPasswordError}) => {
                                 <div className="col-12">
                                     <label>Password</label>
                                     <input className="input-field" type="password" value={password} onChange={handlePassword} />
-                                    { showPasswordError ? <div className="password-error-message">Senha incorreta</div>: null }
+                                    { wrongCredentialsError ? <div className="password-error-message">Senha incorreta</div>: null }
                                 </div>
                             </div>
                             <div className="row button-wrapper">
