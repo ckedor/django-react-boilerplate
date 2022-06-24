@@ -44,7 +44,7 @@ export const AuthProvider = ({children}) => {
                     setAuthTokens(data)
                     setUser(jwt_decode(data.access))
                     localStorage.setItem('authTokens', JSON.stringify(data))
-                    navigate("/logged_area", { replace: true })
+                    navigate("/dashboard", { replace: true })
                 }
                 else{
                     setWrongCredencialsError(true)
@@ -98,7 +98,10 @@ export const AuthProvider = ({children}) => {
     }
 
     useEffect(()=>{
-        
+        if(!authTokens) {
+            setLoading(false)
+            return 
+        }
         if(loading){
             updateToken()
         }
