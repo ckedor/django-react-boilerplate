@@ -1,12 +1,17 @@
 Esse repositório consiste em um boilerplate de um app React conectada a uma API com  django-rest-framework com algumas configurações iniciais e instruções para começar rapidamente um projeto web full stack com ambiente de desenvolvimento e produção com deploy no heroku.
 
 ########################### Frontend
+Abrir o VsCode no diretório ./frontend/app 
+
 Instalar na máquina o node, o npm, e o yarn
 Na raiz do projeto instalar as dependencias com yarn:
 $ yarn install
 
 Executar ambiente dev:
 $ yarn dev
+
+opcional: Habilitar Allow Automatic Tasks no VsCode, para executar o ambiente dev toda vez que o workspace abre
+          Executar ambiente com ctrl+shift+b
 
 ########################### Backend
 Instructions:
