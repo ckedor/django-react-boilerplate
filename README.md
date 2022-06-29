@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# django-react-boilerplate
-
-Deploy no Heroku
-=======
 Esse repositório consiste em um boilerplate de um app React conectada a uma API com  django-rest-framework com algumas configurações iniciais e instruções para começar rapidamente um projeto web full stack com ambiente de desenvolvimento e produção com deploy no heroku.
 
 ########################### Frontend
@@ -94,4 +89,3 @@ $ heroku run python manage.py shell                     -- usando o shell no ser
 $ heroku run bash                 -- usando o bash no servidor
 
 
->>>>>>> aff9006efd3f8428d8b689298990fb1bba3a5a00
