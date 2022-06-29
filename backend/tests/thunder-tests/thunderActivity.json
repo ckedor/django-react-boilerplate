@@ -60,18 +60,13 @@
     "colId": "history",
     "containerId": "",
     "name": "http://127.0.0.1:8000/auth/",
-    "url": "http://127.0.0.1:8000/auth/",
-    "method": "POST",
+    "url": "http://127.0.0.1:8000/users",
+    "method": "GET",
     "sortNum": 0,
     "created": "2022-06-09T20:51:33.800Z",
-    "modified": "2022-06-16T00:16:22.067Z",
+    "modified": "2022-06-24T02:13:08.255Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n    \"username\":\"admin\",\n    \"password\":\"senhafacil\"\n}",
-      "form": []
-    },
     "tests": []
   },
   {
