@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "python runserver",
+      "type": "shell",
+      "command": "python manage.py runserver",
+      "windows": {
+        "command": "./venv/Scripts/activate; python manage.py migrate; python manage.py runserver"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}
